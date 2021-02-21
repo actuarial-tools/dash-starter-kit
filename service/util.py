@@ -3,11 +3,10 @@ import base64
 import os
 import sys
 import requests
-from functools import reduce
 
 STARWARS_URL = 'https://swapi.dev/api/'
 
-def starwar_http_client(params):
+def starwars_http_client(params):
     return requests.get('{}{}'.format(STARWARS_URL, params))
 
 def decodeBase64_message(base64_message):
