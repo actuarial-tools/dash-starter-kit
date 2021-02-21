@@ -7,9 +7,9 @@ from view import header_bar_view
 layout = html.Div([
     header_bar_view.layout,
     router.layout,
-], id="app-container", className="app-container")
+])
 
-app.layout = html.Div(layout, id="app-layout")
+app.layout = html.Div(layout)
 
 if __name__ == '__main__':
     PORT = 5000

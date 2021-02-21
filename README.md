@@ -8,6 +8,10 @@ Dash starter kit is opinionated architecture based on best practices from our co
 * view
 * api layer
 * service layer
+* Page 404
+* Help
+* Datatable
+* Get Cookie data for authentication
 
 ## Installation
 
