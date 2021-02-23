@@ -7,8 +7,6 @@ FA = "https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 
 # Global variable
 PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
-ROUTER_ID = 'url'
-CONTENT_ID = 'page_content'
 ROUTER_STORE = 'router_store'
 SELECTED_PERSON = 'selected_person'
 PEOPLE_SELECTED_BUTTON = 'selected_person_btn'

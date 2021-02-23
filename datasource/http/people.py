@@ -1,4 +1,3 @@
-import requests
 from service.util import starwars_http_client
 
 

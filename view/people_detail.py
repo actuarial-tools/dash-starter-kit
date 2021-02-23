@@ -5,7 +5,7 @@ from dash_core_components.Store import Store
 import dash_html_components as html
 from dash.dependencies import ALL, Input, Output, State
 from dash.exceptions import PreventUpdate
-from app import app, datasource, SELECTED_PERSON, PEOPLE_SELECTED_BUTTON
+from app import app, SELECTED_PERSON, PEOPLE_SELECTED_BUTTON
 import dash
 
 _PEOPLE_DETAIL_MODAL = 'people_modal'

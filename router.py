@@ -3,17 +3,19 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 from flask import request
-from app import app, ROUTER_ID, CONTENT_ID, ROUTER_STORE, USER_ID, datasource
+from app import app, ROUTER_STORE, USER_ID
 from service.util import get_user_id
 from view import unknown_view, people_list
 
+_CONTEND_ID = 'page_content'
+_ROUTER_ID = 'url'
 
 @app.callback([
-    Output(CONTENT_ID, 'children'),
+    Output(_CONTEND_ID, 'children'),
     Output(ROUTER_STORE, 'data'),
     Output(USER_ID, 'data')
 ],
-    Input("url", "pathname")
+    Input(_ROUTER_ID, "pathname")
 )
 def url_manager(url):
     user_id = get_user_id(request.cookies).upper()
@@ -61,6 +63,6 @@ def url_manager(url):
 layout = html.Div([
     dcc.Store(id=ROUTER_STORE),
     dcc.Store(id=USER_ID),
-    dcc.Location(id=ROUTER_ID),
-    html.Div(id=CONTENT_ID, className="page-content-normal")
-], className="layout-container")
+    dcc.Location(id=_ROUTER_ID),
+    html.Div(id=_CONTEND_ID)
+])
